@@ -8,9 +8,10 @@ import { Cards } from './Cards'
 
 export function Main() {
 
-const [searchText, setSearchText] = useState("");
+const [searchText, setSearchText] = useState('');
 
 const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	e.preventDefault();
   setSearchText(e.target.value);
 };
 

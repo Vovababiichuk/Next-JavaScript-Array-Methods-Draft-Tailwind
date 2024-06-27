@@ -1,8 +1,8 @@
-import Image, { StaticImageData } from 'next/image'
-import { useState } from 'react'
-import Link from 'next/link'
 import { cn } from '@/app/utils/cn'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
 
 export const HoverEffect = ({
 	items,
@@ -13,8 +13,8 @@ export const HoverEffect = ({
 		strong1: string
 		strong2: string
 		description: string
-		cardImage: string
 		alt: string
+		src: StaticImageData
 		link: string
 	}[]
 	className?: string
@@ -58,7 +58,7 @@ export const HoverEffect = ({
 						<CardTitle>{item.title}</CardTitle>
 						<CardStrong strong1={item.strong1} strong2={item.strong2} />
 						<CardDescription>{item.description}</CardDescription>
-						<CardImage src={item.cardImage} alt={item.title} />
+						<CardImage src={item.src} alt={item.title} />
 					</Card>
 				</Link>
 			))}
@@ -181,4 +181,3 @@ export const CardImage = ({
 		</div>
 	)
 }
-
