@@ -5,17 +5,15 @@ import filterImg from '../../public/img/filter.png'
 import mapImg from '../../public/img/map.png'
 import reduceImg from '../../public/img/reduce.png'
 
-type searchText = string
-
-export function Cards({ searchText: searchText }: { searchText: searchText }) {
+export function Cards({ searchText }: { searchText: string }) {
 	const filteredProjects = projects
-	.filter((project) =>
-		project.title.toLowerCase().includes(searchText.toLowerCase())
-	)
-	.map(project => ({
-		...project,
-		src: project.src || filterImg,
-	}));
+		.filter(project =>
+			project.title.toLowerCase().includes(searchText.toLowerCase())
+		)
+		.map(project => ({
+			...project,
+			src: project.src || filterImg,
+		}))
 
 	return (
 		<div className='max-w-20xl mx-auto text-left px-0 md:px-10 '>
@@ -27,8 +25,10 @@ export function Cards({ searchText: searchText }: { searchText: searchText }) {
 export const projects = [
 	{
 		title: 'Filter()',
-		strong1: 'callbackFn, initialValue (Optional)',
+		strong1: 'callbackFn, thisArg (Optional)',
 		strong2: 'Array',
+		strong3: 'element, index, array',
+		strong4: 'boolean',
 		description:
 			'The filter() method returns a new array with all elements that pass the test defined by the given function.',
 		src: filterImg,
@@ -39,6 +39,8 @@ export const projects = [
 		title: 'Map()',
 		strong1: 'callbackFn, thisArg (Optional)',
 		strong2: 'Array',
+		strong3: 'element, index, array',
+		strong4: 'elements',
 		description:
 			'The map() method creates a new array with the results of calling a function for every array element.',
 		src: mapImg,
@@ -47,8 +49,10 @@ export const projects = [
 	},
 	{
 		title: 'Reduce()',
-		strong1: 'callbackFn, thisArg (Optional)',
-		strong2: 'Array',
+		strong1: 'callbackFn, initialValue (Optional), thisArg (Optional)',
+		strong2: 'anything',
+		strong3: 'accumulator, currentValue, currentIndex, array',
+		strong4: 'new accumulator (any)',
 		description:
 			'The reduce() method executes a reducer function on each element of the array and returns a single output value.',
 		src: reduceImg,

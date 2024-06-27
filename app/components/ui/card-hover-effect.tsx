@@ -12,6 +12,8 @@ export const HoverEffect = ({
 		title: string
 		strong1: string
 		strong2: string
+		strong3: string
+		strong4: string
 		description: string
 		alt: string
 		src: StaticImageData
@@ -55,10 +57,23 @@ export const HoverEffect = ({
 						)}
 					</AnimatePresence>
 					<Card>
-						<CardTitle>{item.title}</CardTitle>
-						<CardStrong strong1={item.strong1} strong2={item.strong2} />
-						<CardDescription>{item.description}</CardDescription>
-						<CardImage src={item.src} alt={item.title} />
+						<div className='flex flex-col gap-2`'>
+							<div className='h-[200px]'>
+								<CardTitle>{item.title}</CardTitle>
+								<CardStrong
+									strong1={item.strong1}
+									strong2={item.strong2}
+									strong3={item.strong3}
+									strong4={item.strong4}
+								/>
+							</div>
+							<div className='h-[110px]'>
+								<CardDescription>{item.description}</CardDescription>
+							</div>
+							<div>
+								<CardImage src={item.src} alt={item.title} />
+							</div>
+						</div>
 					</Card>
 				</Link>
 			))}
@@ -108,10 +123,14 @@ export const CardStrong = ({
 	className,
 	strong1,
 	strong2,
+	strong3,
+	strong4,
 }: {
 	className?: string
 	strong1: React.ReactNode
 	strong2: React.ReactNode
+	strong3: React.ReactNode
+	strong4: React.ReactNode
 }) => {
 	return (
 		<>
@@ -135,6 +154,28 @@ export const CardStrong = ({
 					)}
 				>
 					{strong2}
+				</strong>
+			</div>
+			<div>
+				<span className='text-[#12d979]'>Callback-input: </span>
+				<strong
+					className={cn(
+						'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
+						className
+					)}
+				>
+					{strong3}
+				</strong>
+			</div>
+			<div>
+				<span className='text-[#12d979]'>Callback-output: </span>
+				<strong
+					className={cn(
+						'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
+						className
+					)}
+				>
+					{strong4}
 				</strong>
 			</div>
 		</>
