@@ -14,6 +14,10 @@ import foreachImg from '../../public/img/foreach.png'
 import reverseImg from '../../public/img/reverse.png'
 import joinImg from '../../public/img/join.png'
 import splitImg from '../../public/img/split.png'
+import includesImg from '../../public/img/includes.png'
+import indexofImg from '../../public/img/indexof.png'
+import findImg from '../../public/img/find.png'
+import everyImg from '../../public/img/every.png'
 
 export interface Method {
 	title: string
@@ -207,5 +211,53 @@ export const methods: Method[] = [
 		src: joinImg,
 		alt: 'Join method image',
 		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join',
+	},
+	{
+		title: 'Includes()',
+		strong1: 'searchElement, fromIndex (Optional)',
+		strong2: 'true/false',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'The includes() method checks if an array contains a specified element or not.',
+		src: includesImg,
+		alt: 'Includes method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
+	},
+	{
+		title: 'IndexOf()',
+		strong1: 'searchElement, fromIndex (Optional)',
+		strong2: 'The first index of searchElement in the array; -1 if not found.',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'indexOf() compares searchElement to elements of the Array using strict equality (similar to triple-equals operator or ===).',
+		src: indexofImg,
+		alt: 'IndexOf method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf',
+	},
+	{
+		title: 'Find()',
+		strong1: 'callbackFn, thisArg (Optional)',
+		strong2: 'Returns the first element in the array that satisfies a given function, or undefined if none do.',
+		strong3: 'element, index, array',
+		strong4: 'true/false',
+		description:
+			'The find() method returns the value of the first array element that satisfies the provided test function.',
+		src: findImg,
+		alt: 'Find method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find',
+	},
+	{
+		title: 'Every()',
+		strong1: 'callbackFn, thisArg (Optional)',
+		strong2: 'true/false',
+		strong3: 'element, index, array',
+		strong4: 'true/false',
+		description:
+			'The every() method checks if all array elements pass a given test function without modifying the original array.',
+		src: everyImg,
+		alt: 'Every method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every',
 	},
 ]

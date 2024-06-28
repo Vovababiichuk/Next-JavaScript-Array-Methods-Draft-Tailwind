@@ -19,6 +19,10 @@ const config: Config = {
 				'accent-text': '#F80479',
 				'green-text': '#12d979',
 			},
+			boxShadow: {
+				'shadow-neon':
+					'0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1), 0 0 0 3px #F80479',
+			},
 		},
 	},
 	plugins: [],
