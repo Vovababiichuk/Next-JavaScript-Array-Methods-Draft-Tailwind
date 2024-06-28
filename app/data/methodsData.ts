@@ -18,6 +18,8 @@ import includesImg from '../../public/img/includes.png'
 import indexofImg from '../../public/img/indexof.png'
 import findImg from '../../public/img/find.png'
 import everyImg from '../../public/img/every.png'
+import someImg from '../../public/img/some.png'
+import fillImg from '../../public/img/fill.png'
 
 export interface Method {
 	title: string
@@ -260,4 +262,28 @@ export const methods: Method[] = [
 		alt: 'Every method image',
 		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every',
 	},
+	{
+		title: 'Some()',
+		strong1: 'callbackFn, thisArg (Optional)',
+		strong2: 'true/false',
+		strong3: 'element, index, array',
+		strong4: 'true/false',
+		description:
+			'The some() method tests whether any of the array elements pass the given test function. Change the original array',
+		src: someImg,
+		alt: 'Some method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some',
+	},
+	{
+		title: 'Fill()',
+		strong1: 'value, start (Optional), end (Optional)',
+		strong2: 'Returns the modified array, filled with value from start to end.',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'The fill() method returns an array by filling all elements with a specified value. fill() is a mutator method.',
+		src: fillImg,
+		alt: 'Fill method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill',
+	}
 ]
