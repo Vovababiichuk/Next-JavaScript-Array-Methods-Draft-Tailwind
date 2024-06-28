@@ -58,7 +58,7 @@ export const HoverEffect = ({
 					</AnimatePresence>
 					<Card>
 						<div className='flex flex-col gap-2`'>
-							<div className='h-[200px]'>
+							<div className='h-[210px]'>
 								<CardTitle>{item.title}</CardTitle>
 								<CardStrong
 									strong1={item.strong1}
@@ -67,7 +67,7 @@ export const HoverEffect = ({
 									strong4={item.strong4}
 								/>
 							</div>
-							<div className='h-[110px]'>
+							<div className='h-[100px]'>
 								<CardDescription>{item.description}</CardDescription>
 							</div>
 							<div>
@@ -96,7 +96,7 @@ export const Card = ({
 			)}
 		>
 			<div className='relative z-50'>
-				<div className='p-4'>{children}</div>
+				<div className='p-0'>{children}</div>
 			</div>
 		</div>
 	)
@@ -111,7 +111,7 @@ export const CardTitle = ({
 	return (
 		<h2
 			className={cn(
-				'text-[#f80479] font-bold tracking-wide text-2xl text-center mb-4 uppercase border-b-2 dark:border-white/[0.2] pb-2',
+				'text-[#f80479] font-bold tracking-wide text-2xl text-center mb-4 uppercase border-b-2 dark:border-white/[0.2] py-2',
 				className
 			)}
 		>
@@ -134,49 +134,51 @@ export const CardStrong = ({
 }) => {
 	return (
 		<>
-			<div>
-				<span className='text-[#12d979]'>Input: </span>
-				<strong
-					className={cn(
-						'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
-						className
-					)}
-				>
-					{strong1}
-				</strong>
-			</div>
-			<div>
-				<span className='text-[#12d979]'>Output: </span>
-				<strong
-					className={cn(
-						'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
-						className
-					)}
-				>
-					{strong2}
-				</strong>
-			</div>
-			<div>
-				<span className='text-[#12d979]'>Callback-input: </span>
-				<strong
-					className={cn(
-						'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
-						className
-					)}
-				>
-					{strong3}
-				</strong>
-			</div>
-			<div>
-				<span className='text-[#12d979]'>Callback-output: </span>
-				<strong
-					className={cn(
-						'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
-						className
-					)}
-				>
-					{strong4}
-				</strong>
+			<div className='px-4'>
+				<div>
+					<span className='text-[#12d979]'>Input: </span>
+					<strong
+						className={cn(
+							'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
+							className
+						)}
+					>
+						{strong1}
+					</strong>
+				</div>
+				<div>
+					<span className='text-[#12d979]'>Output: </span>
+					<strong
+						className={cn(
+							'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
+							className
+						)}
+					>
+						{strong2}
+					</strong>
+				</div>
+				<div>
+					<span className='text-[#12d979]'>Callback-input: </span>
+					<strong
+						className={cn(
+							'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
+							className
+						)}
+					>
+						{strong3}
+					</strong>
+				</div>
+				<div>
+					<span className='text-[#12d979]'>Callback-output: </span>
+					<strong
+						className={cn(
+							'mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm',
+							className
+						)}
+					>
+						{strong4}
+					</strong>
+				</div>
 			</div>
 		</>
 	)
@@ -192,7 +194,7 @@ export const CardDescription = ({
 	return (
 		<p
 			className={cn(
-				'mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm mb-6',
+				'mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm mb-6 px-4',
 				className
 			)}
 		>
@@ -211,14 +213,21 @@ export const CardImage = ({
 	className?: string
 }) => {
 	return (
-		<div className={cn('relative w-full h-64', className)}>
-			<Image
-				src={src}
-				alt={alt}
-				layout='fill'
-				objectFit='cover'
-				className='rounded-lg'
-			/>
+		<div
+			className={cn(
+				'relative w-full h-64 flex items-center justify-center bg-neutral-900 rounded-lg overflow-hidden p-0',
+				className
+			)}
+		>
+			<div className='w-full h-full relative'>
+				<Image
+					src={src}
+					alt={alt}
+					layout='fill'
+					objectFit='cover'
+					className='rounded-lg'
+				/>
+			</div>
 		</div>
 	)
 }
