@@ -22,7 +22,7 @@ export function Main() {
 	return (
 		<div className='m-auto rounded-md  h-screen overflow-x-hidden text-center'>
 			<h2 className='text-white text-2xl md:text-6xl font-bold mt-12'>
-				JavaScript Array Methods
+				JavaScript Array/String Methods
 			</h2>
 			<input
 				type='text'

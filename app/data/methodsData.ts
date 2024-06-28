@@ -8,6 +8,12 @@ import shiftImg from '../../public/img/shift.png'
 import unShiftImg from '../../public/img/unshift.png'
 import concatImg from '../../public/img/concat.png'
 import sortImg from '../../public/img/sort.png'
+import spliceImg from '../../public/img/splice.png'
+import sliceImg from '../../public/img/slice.png'
+import foreachImg from '../../public/img/foreach.png'
+import reverseImg from '../../public/img/reverse.png'
+import joinImg from '../../public/img/join.png'
+import splitImg from '../../public/img/split.png'
 
 export interface Method {
 	title: string
@@ -59,6 +65,18 @@ export const methods: Method[] = [
 		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce',
 	},
 	{
+		title: 'forEach()',
+		strong1: 'callbackFn, thisArg (Optional)',
+		strong2: 'None (undefined).',
+		strong3: 'element, index, array',
+		strong4: 'elements',
+		description:
+			'The forEach() method executes a provided function for each array element.',
+		src: foreachImg,
+		alt: 'forEach method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach',
+	},
+	{
 		title: 'Pop()',
 		strong1: 'none',
 		strong2: 'element | undefined',
@@ -73,7 +91,7 @@ export const methods: Method[] = [
 	{
 		title: 'Push()',
 		strong1: 'element1, …, elementN',
-		strong2: 'length',
+		strong2: 'Returns the new (after appending the arguments) length of the array upon which the method was called.',
 		strong3: '-',
 		strong4: '-',
 		description:
@@ -97,7 +115,7 @@ export const methods: Method[] = [
 	{
 		title: 'Unshift()',
 		strong1: 'element1, …, elementN',
-		strong2: 'length',
+		strong2: 'Returns the new (after adding arguments to the beginning of array) length of the array upon which the method was called.',
 		strong3: '-',
 		strong4: '-',
 		description:
@@ -109,7 +127,7 @@ export const methods: Method[] = [
 	{
 		title: 'Concat()',
 		strong1: 'value1, …, valueN (Optional)',
-		strong2: 'Array',
+		strong2: 'Returns a newly created array after merging all arrays/values passed in the argument.',
 		strong3: '-',
 		strong4: '-',
 		description:
@@ -121,13 +139,73 @@ export const methods: Method[] = [
 	{
 		title: 'Sort()',
 		strong1: 'compareFn (Optional)',
-		strong2: 'sorted Array',
-		strong3: '-',
-		strong4: '-',
+		strong2: 'The reference to the original array, now sorted. Note that the array is sorted in place, and no copy is made.',
+		strong3: 'a, b',
+		strong4: 'sort order',
 		description:
 			'The sort() method sorts the items of an array in a specific order (ascending or descending).',
 		src: sortImg,
 		alt: 'Sort method image',
 		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort',
+	},
+	{
+		title: 'Splice()',
+		strong1: 'start, deleteCount (Optional), item1,…, itemN (Optional)',
+		strong2: 'Returns an array containing the deleted elements',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'The splice() method modifies an array (adds, removes or replaces elements).',
+		src: spliceImg,
+		alt: 'Splice method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice',
+	},
+	{
+		title: 'Slice()',
+		strong1: 'start (Optional), end (Optional)',
+		strong2: 'new Array',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'The slice() method returns a shallow copy of a portion of an array into a new array object.',
+		src: sliceImg,
+		alt: 'Slice method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice',
+	},
+	{
+		title: 'Split()',
+		strong1: 'separator (Optional), limit (Optional)',
+		strong2: 'Returns an Array of strings, split at each point where the separator occurs in the given string.',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'The split() method divides a string into substrings and returns them as an array without modifying the original string.',
+		src: splitImg,
+		alt: 'Split method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split',
+	},
+	{
+		title: 'Reverse()',
+		strong1: 'None.',
+		strong2: 'Returns the array after reversing the order of its elements.',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'The reverse() method returns the array in reverse order. The method changes the original array.',
+		src: reverseImg,
+		alt: 'Reverse method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse',
+	},
+	{
+		title: 'Join()',
+		strong1: 'separator (Optional). If omitted, the array elements are separated with a comma (",").',
+		strong2: 'Returns a String with all the array elements joined by separator.',
+		strong3: '-',
+		strong4: '-',
+		description:
+			'join() combines all array elements into a single string with a specified separator, without changing the original array.',
+		src: joinImg,
+		alt: 'Join method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join',
 	},
 ]
