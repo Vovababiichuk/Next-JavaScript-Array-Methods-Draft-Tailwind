@@ -216,7 +216,7 @@ export const CardImage = ({
 				src={src}
 				alt={alt}
 				layout='fill'
-				objectFit='contain'
+				objectFit='cover'
 				className='rounded-lg'
 			/>
 		</div>

@@ -52,4 +52,16 @@ export const methods: Method[] = [
 		alt: 'Reduce method image',
 		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce',
 	},
+	{
+		title: 'Test()',
+		strong1: 'callbackFn, initialValue (Optional), thisArg (Optional)',
+		strong2: 'anything',
+		strong3: 'accumulator, currentValue, currentIndex, array',
+		strong4: 'new accumulator (any)',
+		description:
+			'The reduce() method executes a reducer function on each element of the array and returns a single output value.',
+		src: reduceImg,
+		alt: 'Reduce method image',
+		link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce',
+	},
 ]
